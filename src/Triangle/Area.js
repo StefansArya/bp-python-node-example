@@ -5,7 +5,7 @@
  * @summary Triangle (base * height / 2)
  * @blackprint node
  */
-Blackprint.registerNode("MyCustom/Triangle/Area",
+Blackprint.registerNode("YourModuleName/Triangle/Area",
 class Node extends Blackprint.Node {
 	static input = {
 		/** The width of the triangle (left to right) */

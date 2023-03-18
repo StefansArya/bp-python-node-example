@@ -1,4 +1,8 @@
-Blackprint.registerNode('MyCustom/Other/Input',
+/**
+ * Just a simple input box
+ * @blackprint node
+ */
+Blackprint.registerNode('YourModuleName/Other/Input',
 class extends Blackprint.Node {
 	static output = {
 		Value: Number,

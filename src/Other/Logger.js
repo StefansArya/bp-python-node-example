@@ -1,4 +1,4 @@
-Blackprint.registerNode('MyCustom/Other/Logger',
+Blackprint.registerNode('YourModuleName/Other/Logger',
 class extends Blackprint.Node {
 	static input = {
 		Any: Blackprint.Port.ArrayOf(Blackprint.Types.Any)

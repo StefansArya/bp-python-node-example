@@ -1,7 +1,7 @@
 import Blackprint
 import types
 
-@Blackprint.registerNode('MyCustom/Other/Input')
+@Blackprint.registerNode('YourModuleName/Other/Input')
 class Simple(Blackprint.Node):
 	output = {
 		'Value': float,

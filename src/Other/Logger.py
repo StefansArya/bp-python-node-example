@@ -1,7 +1,7 @@
 import json
 import Blackprint
 
-@Blackprint.registerNode('MyCustom/Other/Logger')
+@Blackprint.registerNode('YourModuleName/Other/Logger')
 class Logger(Blackprint.Node):
 	iface: 'LoggerIFace' = None
 	input = {

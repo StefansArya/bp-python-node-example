@@ -1,7 +1,7 @@
 import Blackprint
 
 # The implementation is similar with the JS version
-@Blackprint.registerNode('MyCustom/Triangle/Area')
+@Blackprint.registerNode('YourModuleName/Triangle/Area')
 class Area(Blackprint.Node):
 	# JS => static input = [ ... ]
 	input = {

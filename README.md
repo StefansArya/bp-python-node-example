@@ -5,7 +5,7 @@ To begin the development, please clone this repository and start the module serv
 
 ```sh
 $ cd /your/project/folder
-$ git clone --depth 1 --recurse-submodules https://github.com/blackprint/nodes-yourmodulename.git .
+$ git clone --depth 1 https://github.com/StefansArya/bp-python-node-example .
 $ pnpm i
 $ npm start
  >> [Browsersync] Access URLs:
@@ -26,7 +26,7 @@ Before opening `.sf` file, please install the [syntax highlighter](https://githu
 ## Trying the example
 The `example` folder contains example for running the exported Blackprint instance (JSON) for Node.js and Python 3. The exported instance can be imported to the editor that already connected to the module server and it can be visualized like below:
 
-![brave_NwRZeiobVP](https://user-images.githubusercontent.com/11073373/226104491-557cac1b-2fbe-48b7-94f8-a3b41a736780.jpg)
+![brave_P4CF4EhINq](https://user-images.githubusercontent.com/11073373/226105575-b295e85c-e497-405d-9e19-51d3f73d6f60.jpg)
 
 If you want to try for Node.js, make sure the compiled module already in `dist` folder. If not, then you can run below:
 
