@@ -1,0 +1,45 @@
+## html
+<div class="node" style="transform: translate({{ x }}px, {{ y }}px)">
+  <sf-template path="Blackprint/nodes/template/routes.sf"></sf-template>
+  <sf-template path="Blackprint/nodes/template/header.sf"></sf-template>
+
+  <div class="content">
+    <textarea value="{{ log }}"></textarea>
+
+    <div class="left-port">
+      <sf-template path="Blackprint/nodes/template/input-port.sf"></sf-template>
+    </div>
+  </div>
+
+  <sf-template path="Blackprint/nodes/template/other.sf"></sf-template>
+</div>
+
+## scss-global
+bpic-other-logger{
+	textarea{
+		width: 100px;
+	}
+}
+
+## js-global
+Blackprint.Sketch.registerInterface('BPIC/YourModuleName/Other/Logger',
+class extends Context.IFace.Logger {
+	// Listener when log value is being send to HTML input element by the framework
+	// I'm using this for auto scale the width/height of the textarea
+	m2v$log(now){
+		// Scale the input box depend on character length
+		var el = this.$el('textarea');
+
+		// Skip if textarea was larger than our auto control
+		// I mean, if user have change the size manually
+		if(el[0] == null || el[0].offsetWidth > 150 || el[0].offsetHeight > 60)
+			return;
+
+		if(now.length < 8)
+			el.attr('style', '');
+		else if(now.length >= 8 && now.length < 14)
+			el.attr('style', 'width:'+(10*now.length)+'px');
+		else if(now.length >= 14)
+			el.attr('style', 'width:140px;height:50px');
+	}
+});
